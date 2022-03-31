@@ -9,9 +9,10 @@ public class ImageTester {
     private String matchLevel;
     private String branch;
     private String parentBranch;
+    private String baseline;
     private String viewportSize;
     private String logFile;
-    private String threads;
+    private int threads;
     private String testName;
     private String batchName;
     private String batchId;
@@ -32,7 +33,7 @@ public class ImageTester {
     private String pdfPassword;
     private String preservePDFNames;
 
-    public ImageTester(ImageTesterBuilder imageTesterBuilder) {
+    public ImageTester(ImageTesterCommandBuilder imageTesterBuilder) {
     }
 
     public String getApiKey() {
@@ -63,6 +64,10 @@ public class ImageTester {
         return this.parentBranch;
     }
 
+    public String baseline() {
+        return this.baseline;
+    }
+
     public String getViewportSize() {
         return this.viewportSize;
     }
@@ -71,7 +76,7 @@ public class ImageTester {
         return this.logFile;
     }
 
-    public String getThreads() {
+    public int getThreads() {
         return this.threads;
     }
 
@@ -150,5 +155,4 @@ public class ImageTester {
     public String getPreservePDFNames() {
         return this.preservePDFNames;
     }
-
 }
